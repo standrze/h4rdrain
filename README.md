@@ -1,3 +1,3 @@
-# h4|2d |241n
+# h4rd rain
 
 oh-my-posh
