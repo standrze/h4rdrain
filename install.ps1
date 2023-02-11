@@ -27,7 +27,7 @@ $Unattended = @"
 </unattend>
 "@
 
-Import-Module ".\Convert-WindowsImage.psm1"
+Import-Module Hyper-ConvertImage -Scope CurrentUser
 
 $Unattended | Out-File -FilePath ".\autounattend.xml"
 
@@ -38,8 +38,18 @@ function Start-Rain
         [string]$Unattended
     )
 
-    #Size at 40GB, Memory /2 for testing
-    Convert-WindowsImage -SourcePath $Source -Edition 6 -VhdFormat "VHDX" -DiskLayout "UEFI" -VhdPath "H4rdRain.vhdx" -SizeBytes 40GB -UnattendPath $Unattended 
+    $VirtualMachine = @{
+        SourcePath = $Source
+        Edition    = 6
+        VhdType    = "Dynamic"
+        VhdFormat  = "VHDX"
+        VhdPath    = "C:\Path\To\output.vhdx"
+        DiskLayout = "UEFI"
+        SizeBytes  = 127GB
+        UnattendPath = $Unattended
+    }
+
+    Hyper-ConvertImage @VirtualMachine
     Dismount-DiskImage -ImagePath $Source | Out-Null
     New-VM -Name "H4rdRain" -MemoryStartupBytes 16GB -Generation 2 -VHDPath "H4rdRain.vhdx" 
 }
