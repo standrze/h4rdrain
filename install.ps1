@@ -27,6 +27,8 @@ $Unattended = @"
 </unattend>
 "@
 
+Import-Module ".\Convert-WindowsImage.psm1"
+
 $Unattended | Out-File -FilePath ".\autounattend.xml"
 
 function Start-Rain
