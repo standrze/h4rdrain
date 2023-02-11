@@ -1,3 +1,3 @@
-# h4rd rain
+# h4rdrain
 
-oh-my-posh
+
