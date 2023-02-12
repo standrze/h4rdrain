@@ -28,5 +28,5 @@ $Selector.ShowDialog()
 $Source = $Selector.FileName
 
 Start-Rain -Source $Source -Unattended ".\autounattend.xml"
-Start-Vm -Name "H4rdRain".
+Start-Vm -Name "H4rdRain"
 vmconnect localhost "H4rdRain"
