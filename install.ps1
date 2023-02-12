@@ -27,8 +27,6 @@ $Unattended = @"
 </unattend>
 "@
 
-Import-Module Hyper-ConvertImage -Scope CurrentUser
-
 $Unattended | Out-File -FilePath ".\autounattend.xml"
 
 function Start-Rain
@@ -49,7 +47,7 @@ function Start-Rain
         UnattendPath = $Unattended
     }
 
-    Hyper-ConvertImage @VirtualMachine
+    Convert-WindowsImage @VirtualMachine
     Dismount-DiskImage -ImagePath $Source | Out-Null
     New-VM -Name "H4rdRain" -MemoryStartupBytes 16GB -Generation 2 -VHDPath "H4rdRain.vhdx" 
 }
