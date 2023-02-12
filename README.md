@@ -18,7 +18,7 @@ Install Convert-WindowsImage Module from repository
 Import-Module .\Convert-WindowsImage.psm1
 ```
 
-Run installation using install.ps1
+Run install.ps1 from within unzipped repository
 ```
 .\install.ps1
 ```
