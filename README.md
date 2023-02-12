@@ -2,6 +2,7 @@
 
 *Requires PowerShell 5.1 to run, default PowerShell. Run as Administrator*
 
+
 Requires Hyper-V, run the following command Hyper-V is not installed as Administrator
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
@@ -25,4 +26,7 @@ Run installation using install.ps1
 Enter Username and Password (if desired), should boot directly into Windows.
 
 Note:
-To cleanup, delete Hyper-V Guest and vhdx file found the same folder as install.ps1
+
+
+- To cleanup, delete Hyper-V Guest and vhdx file found the same folder as install.ps1. 
+- May need to start Hyper-V Guest manually
