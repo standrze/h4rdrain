@@ -29,4 +29,3 @@ Note:
 
 
 - To cleanup, delete Hyper-V Guest and vhdx file found the same folder as install.ps1. 
-- May need to start Hyper-V Guest manually
