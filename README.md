@@ -25,4 +25,4 @@ Run installation using install.ps1
 Enter Username and Password (if desired), should boot directly into Windows.
 
 Note:
-autounattend.xml should be in repostitory. 
+To cleanup, delete Hyper-V Guest and vhdx file found the same folder as install.ps1
