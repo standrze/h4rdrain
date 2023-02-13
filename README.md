@@ -3,7 +3,7 @@
 *Requires PowerShell 5.1 to run, default PowerShell. Run as Administrator*
 
 
-Requires Hyper-V, run the following command Hyper-V is not installed as Administrator
+Requires Hyper-V (Professional or Server Edition), run the following command Hyper-V is not installed as Administrator
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 ```
